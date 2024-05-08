@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect(() => {
     searchMovies(searchTerm);
-  }, []);
+  }, [searchTerm]);
 
   const searchMovies = async title => {
     const res = await fetch(`${API_URL}&s=${title}`);
